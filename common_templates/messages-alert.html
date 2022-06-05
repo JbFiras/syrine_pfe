@@ -1,0 +1,13 @@
+{% if messages %}
+    {% for message in messages %}
+        {% if message.tags == 'success' %}
+            {% include './alert.html' with state='success' dismissible=dismissible|default_if_none:True %}
+        {% elif message.tags == 'info' %}
+            {% include './alert.html' with state='primary' dismissible=dismissible|default_if_none:True %}
+        {% elif message.tags == 'warning' %}
+            {% include './alert.html' with state='warning' dismissible=dismissible|default_if_none:True %}
+        {% else %}
+            {% include './alert.html' with state='danger' dismissible=dismissible|default_if_none:True %}
+        {% endif %}
+    {% endfor %}
+{% endif %}

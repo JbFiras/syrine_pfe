@@ -1,0 +1,8 @@
+<div class="alert alert-{{ state|default:'success' }} {% if dismissible|default:True %} alert-dismissible {% endif %} fade show" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+    </button>
+
+    {{ message }}
+</div>
