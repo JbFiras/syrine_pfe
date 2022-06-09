@@ -16,6 +16,7 @@ urlpatterns = [
     
     path('pause/',views.PausePage, name="pause-page"),
     path('statistique/',views.StatistiquesPage, name="statistique-page"),
+    path('fin-equipe/',views.FinEquipePage, name="fin-equipe-page"),
     
     
     

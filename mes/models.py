@@ -44,5 +44,10 @@ class Objectif_Production(models.Model):
     def __str__(self) :
         return str(self.equipe)
 
-    class META:
-        verbose_name = "Objectif de Production"
+class Produced_Product_Number(models.Model):
+    equipe = models.ForeignKey(Equipe, null=True, on_delete=models.CASCADE, related_name="equipe_produced_number")
+    objectif = models.CharField(max_length=255,null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    
+    def __str__(self) :
+        return str(self.equipe)

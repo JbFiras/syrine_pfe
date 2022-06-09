@@ -24,3 +24,9 @@ class Reclamation_Probleme_QuanliteForm(ModelForm):
         fields =  '__all__'
         exclude = ['created_at','responsable']
 
+class Produced_Product_NumberForm(ModelForm):
+    class Meta:
+        model = Produced_Product_Number
+        fields =  '__all__'
+        exclude = ['created_at','equipe']
+
