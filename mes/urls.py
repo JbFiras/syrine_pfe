@@ -13,7 +13,6 @@ urlpatterns = [
     path('reclamation-probleme-qualite/',views.reclamationProblemeQualitePage, name="reclamation-probleme-qualite-page"),
     path('commencer-reunion/',views.CommencerunereunionPage, name="commencer-reunion-page"),
     path('mode-hors-ligne/',views.ModeHorsLignePage, name="mode-hors-ligne-page"),
-    
     path('pause/',views.PausePage, name="pause-page"),
     path('statistique/',views.StatistiquesPage, name="statistique-page"),
     path('fin-equipe/',views.FinEquipePage, name="fin-equipe-page"),

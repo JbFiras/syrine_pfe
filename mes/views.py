@@ -36,7 +36,9 @@ def AcceuilPage(request):
 
 @login_required
 def DemarrageDeLaLignePage(request):
-    return render(request, "demarragedelaligne.html")
+    if request.method == 'GET':
+        messages.success(request, 'démarrage de la ligne')
+        return redirect('mes:acceuil-page')
 
 @login_required
 def CommencerunereunionPage(request):
