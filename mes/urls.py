@@ -15,6 +15,7 @@ urlpatterns = [
     path('mode-hors-ligne/',views.ModeHorsLignePage, name="mode-hors-ligne-page"),
     
     path('pause/',views.PausePage, name="pause-page"),
+    path('statistique/',views.StatistiquesPage, name="statistique-page"),
     
     
     

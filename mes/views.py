@@ -75,3 +75,19 @@ def reclamationProblemeQualitePage(request):
             messages.success(request, 'Reclamation enregistré avec success')
             return redirect('mes:acceuil-page')
     return render(request, "reclamationproblemequalite.html")
+
+
+
+@login_required
+def StatistiquesPage(request):
+    user = request.user
+    total_probleme_de_maintenance = Reclamation_Probleme_Maintenance.objects.filter(responsable=user).count()
+    total_reclamation_manque_piece = Reclamation_Manque_Piece.objects.filter(responsable=user).count()
+    total_reclamation_probleme_qualite = Reclamation_Probleme_Quanlite.objects.filter(responsable=user).count()
+
+    context={
+        "total_probleme_de_maintenance":total_probleme_de_maintenance,
+        "total_reclamation_manque_piece":total_reclamation_manque_piece,
+        "total_reclamation_probleme_qualite":total_reclamation_probleme_qualite,
+    }
+    return render(request, "statistiques.html",context)
